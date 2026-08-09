@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Mrs. Gadget</title>
+    <title>Privacy Policy - Mrs. Gadget: Face Search AI</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -31,154 +31,74 @@
             margin-top: 30px;
             margin-bottom: 15px;
         }
-        h3 {
-            color: #7f8c8d;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        ul {
-            margin-bottom: 15px;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; padding-left: 20px; }
+        li { margin-bottom: 8px; }
         .highlight {
             background-color: #ecf0f1;
             padding: 15px;
             border-left: 4px solid #3498db;
             margin: 20px 0;
         }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #7f8c8d;
-        }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .last-updated { color: #7f8c8d; font-style: italic; margin-bottom: 30px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="/" class="back-link">← Back to Home</a>
+        <h1>Privacy Policy — Mrs. Gadget: Face Search AI</h1>
+        <p class="last-updated">Last updated: August 9, 2026</p>
 
-        <h1>Privacy Policy - Mrs. Gadget</h1>
+        <p>Mrs. Gadget: Face Search AI ("the App") is a face-focused, public-web visual search utility for adults. This policy explains what happens to the photo you search with and what data we keep. The App is 18+ and must only be used to search your own face or that of a consenting adult.</p>
 
-        <p><strong>Last updated: August 9, 2026</strong></p>
-
-        <h2>Overview</h2>
-        <p>This Privacy Policy describes how Mrs. Gadget ("the App") handles information when you use its mobile product discovery features. The App is provided by Emir Arikan ("Service Provider", "we", "us").</p>
-        <p>Mrs. Gadget helps users identify gadgets, accessories, electronics, and similar products from images. It may compare a submitted photo against public web results or third-party product search systems and return possible matches, product pages, thumbnails, and related information.</p>
-
-        <h2>1. Information We Process</h2>
-
-        <h3>1.1 Images and Search Inputs</h3>
-        <p>When you choose to run a search, the App may process:</p>
+        <h2>1. How a search handles your photo</h2>
         <ul>
-            <li>Photos selected from your library or captured with your camera</li>
-            <li>Cropped or adjusted versions of submitted images</li>
-            <li>Text prompts, labels, categories, or filters you enter for a search</li>
-            <li>Search result data such as thumbnails, product titles, source links, similarity signals, prices, store names, and listing metadata</li>
+            <li>Face detection and cropping happen <strong>on your device</strong>. The selected face is cropped, re-encoded, and stripped of metadata (EXIF, location) before anything leaves your phone.</li>
+            <li>The prepared face crop is sent over an encrypted connection to our backend (Google Cloud, EU region), which holds it <strong>in memory only</strong> for the duration of the provider call. We do not write your photo to our databases or file storage.</li>
+            <li>The crop is forwarded to our search provider (currently SerpApi, which runs a Google Lens visual search) to perform the search. Third-party retention is governed by their own policies — see <a href="https://serpapi.com/legal">SerpApi legal &amp; privacy</a>.</li>
+            <li>Search results (links, titles, thumbnails of public pages) are kept server-side as short-lived job records that expire automatically within about one hour.</li>
+            <li>Your search history, including a small face thumbnail, is stored <strong>only on your device</strong>. You can delete it at any time in Settings.</li>
         </ul>
 
-        <h3>1.2 App and Device Data</h3>
-        <p>To operate and improve the App, we may collect limited technical information, including:</p>
+        <h2>2. What we store</h2>
         <ul>
-            <li>Device type, operating system, language, app version, and region settings</li>
-            <li>Anonymous identifiers such as Firebase installation identifiers, app instance identifiers, IDFV, RevenueCat identifiers, and similar technical IDs</li>
-            <li>Usage events, feature interactions, diagnostics, performance data, and crash reports</li>
-            <li>Local settings such as onboarding progress, search preferences, credits, sound, or haptic choices</li>
+            <li>An anonymous account identifier (Firebase Authentication).</li>
+            <li>Your credit balance and a purchase/credit ledger (needed to operate subscriptions and credit packs).</li>
+            <li>Short-lived search job metadata (status, result links), auto-deleted within about one hour.</li>
+            <li>Basic operational data: crash reports and app diagnostics (Firebase Crashlytics/Analytics), and rate-limiting counters to prevent abuse.</li>
         </ul>
-
-        <h3>1.3 Purchases and Support</h3>
-        <p>If you buy credits or subscribe, the App may receive purchase status, entitlement information, transaction identifiers, and renewal status from Apple and RevenueCat. We do not receive your full card number or payment card details.</p>
-        <p>If you contact support, we may process your email address and the content of your message so we can respond.</p>
-
-        <h2>2. How We Use Information</h2>
-        <p>Information is used for the following purposes:</p>
-        <ul>
-            <li>Running visual product searches requested by you</li>
-            <li>Showing likely gadget matches, links, images, and product information</li>
-            <li>Saving local history and preferences on your device</li>
-            <li>Managing credits, subscriptions, trials, purchases, and restore-purchase flows</li>
-            <li>Protecting the backend from abuse, automated misuse, and fraudulent activity</li>
-            <li>Understanding general app performance and fixing bugs or crashes</li>
-            <li>Providing customer support and responding to legal requests when required</li>
-        </ul>
-
-        <h2>3. Product Photos</h2>
         <div class="highlight">
-            <p>Photos are processed to provide the search you request. Mrs. Gadget does not sell submitted photos and does not use them for advertising.</p>
+            <p>We do <strong>not</strong> permanently store the photos you search with, and we do <strong>not</strong> build or retain biometric templates or face-recognition profiles on our servers.</p>
         </div>
-        <p>Submitted images may be sent to backend systems or third-party visual search, AI, marketplace, or image matching providers. These providers may process the image and return possible product matches, source pages, images, prices, or related metadata.</p>
-        <p>Some preparation, such as cropping, framing, or image quality checks, may happen on your device before a search is sent.</p>
 
-        <h2>4. Local History</h2>
-        <p>The App may keep search history on your device. This can include a submitted image, product thumbnails, source links, search terms, prices, and similar result information. You can clear local history inside the App where available, or remove it by deleting the App from your device.</p>
-
-        <h2>5. Service Providers</h2>
-        <p>Mrs. Gadget may rely on third-party services to provide core functionality and app operations, including:</p>
+        <h2>3. What we do not do</h2>
         <ul>
-            <li>Visual search, AI, product lookup, marketplace, or image matching providers</li>
-            <li>Firebase Authentication for anonymous identity and session support</li>
-            <li>Firebase App Check for request validation and backend protection</li>
-            <li>Firebase Analytics, Crashlytics, and Remote Config for analytics, diagnostics, crash reporting, and configuration</li>
-            <li>Apple App Store for distribution, purchases, subscriptions, and refund handling</li>
-            <li>RevenueCat for purchase, entitlement, credit, and subscription management</li>
-        </ul>
-        <p>These providers process information under their own privacy policies and service terms.</p>
-
-        <h2>6. Sharing</h2>
-        <p>We share information only as needed to operate the App, perform requested searches, manage purchases, secure the service, analyze reliability, respond to support requests, or comply with legal obligations.</p>
-        <p>Submitted photos are shared with visual search or product matching providers only to complete the search requested by you. We do not sell personal information.</p>
-
-        <h2>7. Permissions</h2>
-        <p>The App may ask for:</p>
-        <ul>
-            <li><strong>Camera</strong>, so you can photograph a gadget or product</li>
-            <li><strong>Photo Library</strong>, so you can choose an existing image</li>
-            <li><strong>Notifications</strong>, if reminder or result notification features are offered</li>
-        </ul>
-        <p>You can change these permissions at any time in iOS Settings.</p>
-
-        <h2>8. Children</h2>
-        <p>The App is not directed to children. You must be at least 13 years old to use Mrs. Gadget, or older where local law requires a higher minimum age.</p>
-
-        <h2>9. Prohibited Content</h2>
-        <p>Please do not submit images containing payment cards, passwords, private documents, addresses, personal identification numbers, confidential workplace materials, or other sensitive information unless you have the right and legal basis to do so.</p>
-
-        <h2>10. Retention</h2>
-        <ul>
-            <li>Local history remains on your device until you clear it or uninstall the App.</li>
-            <li>Submitted images are processed for the requested search and are not intentionally kept by Mrs. Gadget as a permanent product database unless a feature clearly says otherwise.</li>
-            <li>Technical identifiers, purchase records, diagnostics, analytics, and security logs may be retained as needed for operations, billing, fraud prevention, troubleshooting, and legal compliance.</li>
-            <li>Third-party providers may retain certain logs or search-related data under their own policies.</li>
+            <li>We do not use face or photo data for advertising, marketing profiles, attribution, behavioural data mining, or unrelated model training.</li>
+            <li>We do not sell your data.</li>
+            <li>We do not compile dossiers: no names, addresses, phone numbers, employers, or social graphs are attached to searches.</li>
         </ul>
 
-        <h2>11. Your Choices</h2>
-        <p>You can clear local App data where controls are available, revoke camera or photo access in iOS Settings, cancel subscriptions through your Apple ID settings, or uninstall the App.</p>
-        <p>Depending on your location, you may have rights to access, delete, correct, restrict, or object to certain processing of your personal information. To make a request, contact <a href="mailto:eacompany947@gmail.com">eacompany947@gmail.com</a>.</p>
+        <h2>4. Purchases</h2>
+        <p>Payments are processed by Apple. We use RevenueCat to manage entitlements and Firebase to keep the credit ledger. These processors receive only the data needed to operate purchases (e.g., an anonymous user ID and transaction state) — never your photos.</p>
 
-        <h2>12. Security</h2>
-        <p>We use reasonable safeguards designed to protect information, including encrypted transmission where supported. However, no mobile app, network, or storage system can be guaranteed to be completely secure.</p>
+        <h2>5. Age policy</h2>
+        <p>The App is <strong>18+</strong>. We do not knowingly collect data from anyone under 18, and uploading photos of minors is prohibited. If you believe a minor's photo has been searched, contact us and we will act on it.</p>
 
-        <h2>13. Changes</h2>
-        <p>We may update this Privacy Policy from time to time. The latest version will be posted on this page. Continued use of the App after an update means you accept the revised policy.</p>
-
-        <h2>14. Contact</h2>
+        <h2>6. Your choices and deletion</h2>
         <ul>
-            <li><strong>Email</strong>: <a href="mailto:eacompany947@gmail.com">eacompany947@gmail.com</a></li>
+            <li>Clear local search history and cached thumbnails at any time from Settings.</li>
+            <li>Request deletion of your account and server-side data from Settings or by email. Some transaction records may be retained where required for legal or accounting obligations.</li>
         </ul>
 
-        <p><em>This Privacy Policy is effective as of August 9, 2026.</em></p>
+        <h2>7. Legal bases and international transfers</h2>
+        <p>We process the photo you submit solely to perform the search you explicitly request (performance of a contract / your explicit request). Our backend runs in the EU (europe-west1); search providers may process data in other jurisdictions under their own safeguards.</p>
+
+        <h2>8. Changes</h2>
+        <p>We may update this policy. Material changes will be reflected on this page with a new "last updated" date.</p>
+
+        <h2>9. Contact</h2>
+        <p>Privacy questions or deletion requests: <a href="mailto:eacompany947@gmail.com">eacompany947@gmail.com</a></p>
     </div>
 </body>
 </html>
