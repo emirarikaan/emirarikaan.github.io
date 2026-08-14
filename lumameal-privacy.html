@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - LumaMeal</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #14b8a6;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .highlight {
+            background-color: #e6fbf7;
+            padding: 15px;
+            border-left: 4px solid #14b8a6;
+            margin: 20px 0;
+        }
+        a { color: #0d9488; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .last-updated { color: #7f8c8d; font-style: italic; margin-bottom: 30px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 15px; }
+        th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+        th { color: #34495e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy — LumaMeal</h1>
+        <p class="last-updated">Last updated: August 14, 2026</p>
+
+        <p>LumaMeal ("the App", "we", "us") is a meal-planning app that builds a personalized weekly meal plan, generates a grocery list, estimates nutrition from photos of your meals or pantry, and lets you track what you eat. This policy explains what data the App collects, why, and how it is stored and protected.</p>
+
+        <div class="highlight">
+            <p>LumaMeal does <strong>not</strong> require your name, email address, or a password to use the App. You are identified only by an anonymous, randomly generated device account. Your meal photos, pantry photos, preferences, and logs are stored securely and are never sold or shared with advertisers.</p>
+        </div>
+
+        <h2>1. Account &amp; identity</h2>
+        <p>LumaMeal uses Firebase Anonymous Authentication. On first launch, the App creates an anonymous account consisting of a random identifier (UID) — no email, phone number, name, or password is collected or required. This identifier is used solely to associate your preferences, meal plans, grocery lists, and logs with your device so they can sync and persist across app launches.</p>
+        <ul>
+            <li>If you delete and reinstall the App, or use a new device, a new anonymous identifier is created and your previous data is not automatically linked to it.</li>
+            <li>We have no way to identify you personally from your anonymous account.</li>
+        </ul>
+
+        <h2>2. Information you provide during setup</h2>
+        <p>To personalize your plan, the setup flow asks you for:</p>
+        <ul>
+            <li><strong>Household details:</strong> number of adults, number of children and their ages.</li>
+            <li><strong>Goals &amp; preferences:</strong> your meal goal (e.g. balanced, weight loss, muscle gain), dietary preferences (e.g. vegetarian, vegan, keto), allergies and foods to avoid, favorite cuisines, cooking "vibes", loved and avoided ingredients.</li>
+            <li><strong>Kitchen &amp; logistics:</strong> available kitchen equipment, maximum cooking time, cooking difficulty, weekly grocery budget and currency, and your preferred grocery store.</li>
+        </ul>
+        <p>This information is used only to generate and refine your meal plans and grocery lists. It is stored in your Firestore user document and is never used for advertising.</p>
+
+        <h2>3. Camera &amp; photo library</h2>
+        <ul>
+            <li><strong>Camera:</strong> used only when you choose to take a photo — of your pantry/fridge (Scan tab) to detect ingredients, or of a meal (Track tab) to estimate its nutrition. The App does not access the camera in the background.</li>
+            <li><strong>Photo library:</strong> used only when you choose to pick an existing photo for the same purposes (ingredient scanning or meal logging). The App requests access only to the photos you select, not your full library.</li>
+            <li>Photos you submit for scanning or meal-photo estimation are sent securely to our AI provider (Google's Gemini models via Firebase AI Logic) for analysis (ingredient detection or calorie/macro estimation) and are not used to train third-party models or shared with advertisers. Generated meal images may be cached in Firebase Storage, keyed to an anonymized description of the dish (not to your photo or identity), so the same illustration can be reused efficiently across users.</li>
+        </ul>
+
+        <h2>4. Meal plans, grocery lists &amp; logs</h2>
+        <p>The App stores, under your anonymous account:</p>
+        <ul>
+            <li>Generated weekly meal plans, recipes, and grocery lists.</li>
+            <li>Meals you log (including nutrition estimates such as calories, protein, carbs, and fat) and the associated date/meal type.</li>
+            <li>Your plan history and how many times you've regenerated a plan (used to enforce feature limits).</li>
+        </ul>
+        <p>This data is stored in Google Firebase (Firestore and Cloud Storage), scoped to your account so that only your own device/account can read or write it.</p>
+
+        <h2>5. AI-generated content</h2>
+        <p>Meal plans, recipes, ingredient recognition, nutrition estimates, and dish illustrations are generated using Google's Gemini and Imagen models through Firebase AI Logic (Vertex AI). Your setup preferences, pantry/meal photos, and prompts derived from them are sent to Google's AI services solely to generate this content for you. Nutrition estimates are AI-generated approximations and should not be treated as precise medical or clinical measurements — see the Terms of Service for details.</p>
+
+        <h2>6. Subscriptions &amp; payments</h2>
+        <p>LumaMeal offers optional auto-renewable subscriptions (weekly and monthly, each with a free trial) that unlock full AI-generated plans, recipes, and unlimited regenerations. Payments are processed entirely by Apple through your App Store account — LumaMeal never sees or stores your payment or card details. We use <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a> to manage subscription status and entitlements; RevenueCat receives your anonymous app-generated identifier and purchase/transaction data (such as product ID, purchase date, and renewal status) — never your name, email, or card details.</p>
+
+        <h2>7. What we do not collect</h2>
+        <ul>
+            <li>No name, email address, or phone number.</li>
+            <li>No location data — the App never requests location permission.</li>
+            <li>No contacts, calendar, microphone, or Health app data.</li>
+            <li>No advertising SDKs and no third-party analytics used for ad targeting.</li>
+            <li>We do not sell your personal data to anyone.</li>
+        </ul>
+
+        <h2>8. Third-party service providers</h2>
+        <p>We use the following service providers to operate the App. Each processes data only as needed to provide its service to us:</p>
+        <table>
+            <tr><th>Provider</th><th>Purpose</th><th>Data involved</th></tr>
+            <tr><td>Google Firebase (Auth, Firestore, Cloud Storage)</td><td>Anonymous account, data storage &amp; sync</td><td>Anonymous UID, preferences, plans, logs, cached images</td></tr>
+            <tr><td>Google Firebase AI Logic (Gemini / Imagen via Vertex AI)</td><td>Meal plan, recipe, ingredient &amp; nutrition generation</td><td>Preferences, prompts, submitted photos</td></tr>
+            <tr><td>RevenueCat</td><td>Subscription management</td><td>Anonymous UID, purchase/entitlement data</td></tr>
+            <tr><td>Apple (App Store / StoreKit)</td><td>Payment processing</td><td>Handled entirely by Apple</td></tr>
+        </table>
+        <p>These providers are contractually and technically restricted from using your data for their own advertising purposes.</p>
+
+        <h2>9. Data security</h2>
+        <p>Your data is protected by Firebase security rules that scope every document and file to your own anonymous account — no other user or account can read or write your data. Data is encrypted in transit (HTTPS/TLS) and at rest by Google Cloud/Firebase infrastructure.</p>
+
+        <h2>10. Data retention &amp; deletion</h2>
+        <ul>
+            <li>Your preferences, plans, logs, and cached images are retained as long as your account is active, so your plan and history remain available across sessions.</li>
+            <li>To request deletion of your data, contact us at the email below with your request; we will delete your Firestore and Storage data associated with your account.</li>
+            <li>Deleting the App from your device removes local app data but does not automatically delete data stored in Firebase — contact us to have it removed.</li>
+        </ul>
+
+        <h2>11. Children</h2>
+        <p>LumaMeal is not directed at children and is not intended for use by anyone under 13 (or the applicable minimum age in your country). While the App lets a parent or guardian record a child's age as part of household size for portioning purposes, it does not knowingly collect personal data directly from children. If you believe a child has provided us with personal data, contact us and we will delete it.</p>
+
+        <h2>12. Your rights</h2>
+        <p>Depending on where you live (including under GDPR and CCPA), you may have the right to access, correct, export, or delete your data, or to object to certain processing. Because your account is anonymous, we can only act on such requests when you can identify your account (e.g. via the anonymous ID visible in the App, if applicable) or via the device/App instance itself. Contact us using the details below to exercise these rights.</p>
+
+        <h2>13. Changes to this policy</h2>
+        <p>We may update this policy from time to time. Material changes will be reflected on this page with a new "last updated" date; continued use of the App after a change constitutes acceptance of the revised policy.</p>
+
+        <h2>14. Contact</h2>
+        <p>Privacy questions or data deletion requests: <a href="mailto:emirarikan99@gmail.com">emirarikan99@gmail.com</a></p>
+    </div>
+</body>
+</html>
