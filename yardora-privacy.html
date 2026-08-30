@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Yardora</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3E7A4E;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .highlight {
+            background-color: #EAF2EB;
+            padding: 15px;
+            border-left: 4px solid #3E7A4E;
+            margin: 20px 0;
+        }
+        a { color: #8E4F2C; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .last-updated { color: #7f8c8d; font-style: italic; margin-bottom: 30px; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; color: #7f8c8d; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy — Yardora</h1>
+        <p class="last-updated">Last updated: August 30, 2026</p>
+        <div class="highlight"><p>Yardora needs one thing from you: a photo of your garden. There is no account, no ads and no tracking. This page explains exactly what happens to that photo, including the parts that are less than obvious.</p></div>
+
+        <h2>No account, no profile</h2>
+        <p>Yardora asks for no sign-up, no email address and no name. The app signs in anonymously to Firebase, which issues a random identifier so your designs can be returned to your device. That identifier is not linked to you, and we hold no name, email, phone number or address.</p>
+
+        <h2>Your photos — what actually happens</h2>
+        <p>When you ask for a design, the photo you chose is uploaded to our Firebase Storage bucket (Google Cloud, United States) and then:</p>
+        <ul>
+            <li>sent to <a href="https://ai.google.dev/gemini-api/terms">Google's Gemini API</a>, which describes the outdoor space and writes the change list you read under the result;</li>
+            <li>sent to <a href="https://fal.ai/privacy">fal.ai</a>, which renders the redesigned image;</li>
+            <li>stored alongside the result so the before/after slider still works when you reopen the design.</li>
+        </ul>
+        <p>Your original photo is <strong>deleted automatically 30 days after upload</strong> by a scheduled job. The generated result stays in your library until you delete the app or ask us to remove it.</p>
+
+        <h2>How stored images are served — please read this one</h2>
+        <p>Images are delivered to the app over public <code>storage.googleapis.com</code> links. The address of each file contains your random identifier and a random design identifier, so it cannot be guessed or browsed, and it is not listed anywhere. But it is <strong>not password-protected</strong>: anyone who obtains the exact link can open the image, and the link does not expire.</p>
+        <p>In practice the link is only ever sent to your own device. Still, treat a Yardora image link the way you would treat any unlisted link — if you share it, whoever receives it can keep opening it. If you would rather your garden photos were not handled this way, please do not upload them.</p>
+
+        <h2>What else we store</h2>
+        <ul>
+            <li><strong>Your designs</strong> — the title, the change list, the space and style you picked, and the image paths, kept under your anonymous identifier.</li>
+            <li><strong>Usage counters</strong> — how many designs you have generated, so the free allowance and subscription limits can be enforced.</li>
+            <li><strong>Feature requests and feedback</strong> — only if you submit them. Anything you type there is visible to other users on the public request board, so do not include personal details.</li>
+        </ul>
+
+        <h2>Purchases</h2>
+        <p>Subscriptions are sold and processed by Apple through your Apple Account. RevenueCat, our purchase-infrastructure provider, receives an anonymous app-generated identifier and receipt information to confirm whether your subscription is active. Yardora never sees your payment details. See <a href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a>.</p>
+
+        <h2>Diagnostics</h2>
+        <p>Yardora uses Firebase Analytics and Crashlytics to count anonymous events (which screens are opened, whether a generation succeeded) and to receive crash reports. These carry no photo content and no personal identifiers. See <a href="https://firebase.google.com/support/privacy">Firebase's privacy documentation</a>.</p>
+
+        <h2>Notifications</h2>
+        <p>If you turn on "notify me when it's done", the app schedules a local notification on your device. No push server is involved and no notification data leaves your phone.</p>
+
+        <h2>No tracking, no ads</h2>
+        <p>Yardora shows no advertising and performs no cross-app or cross-site tracking. We do not request App Tracking Transparency permission, because we do not track.</p>
+
+        <h2>Deleting your data</h2>
+        <p>Deleting the app removes your anonymous identity from your device, which means the designs stored under it can no longer be reached from the app. To have the stored files and records erased from the server as well, email <a href="mailto:emirarikan99@gmail.com">emirarikan99@gmail.com</a> from the device in question and say so; we will delete them.</p>
+
+        <h2>Children</h2>
+        <p>Yardora is not directed at children and collects no personal information from anyone.</p>
+
+        <h2>Changes</h2>
+        <p>If this policy changes, the updated version is posted at this page with a new date.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about this policy: <a href="mailto:emirarikan99@gmail.com">emirarikan99@gmail.com</a>, or use Settings → Contact Support inside the app.</p>
+
+        <div class="footer"><p>Yardora — AI garden design. · <a href="yardora-terms.html">Terms of Use</a> · <a href="yardora-support.html">Support</a></p></div>
+    </div>
+</body>
+</html>
