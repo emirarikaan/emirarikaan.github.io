@@ -28,4 +28,4 @@ We reserve the right to suspend or terminate your access to our service if you v
 We may update these terms from time to time. Your continued use of the service after changes means you accept the new terms.
 
 ## 8. Contact Us
-If you have any questions, please contact us at emiarikan99@gmail.com 
+If you have any questions, please contact us at eacompany947@gmail.com 

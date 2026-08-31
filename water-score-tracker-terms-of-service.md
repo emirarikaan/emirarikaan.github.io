@@ -132,7 +132,7 @@ If any provision of these terms is found unenforceable, the remaining provisions
 ## 15. Contact Information
 If you have any questions about these Terms of Service, please contact us at:
 
-**Email**: emiarikan99@gmail.com  
+**Email**: eacompany947@gmail.com  
 **Website**: [Your Website URL]  
 **Address**: [Your Business Address]
 
