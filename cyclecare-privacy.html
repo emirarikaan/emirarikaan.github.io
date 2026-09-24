@@ -65,8 +65,18 @@
         </ul>
         <p>Cycle estimates are calculated on your device. This data is not uploaded to any database of ours, and it is never shared with third parties.</p>
 
+        <h2>Apple Health (HealthKit)</h2>
+        <p>If you choose to connect Apple Health, CycleCare asks for <strong>read-only</strong> access to your menstruation (period flow) data from Health's Cycle Tracking. It uses this only to fill in your cycle history and improve your estimates inside the app. You can connect during onboarding or from More → Apple Health, and it's entirely optional.</p>
+        <ul>
+            <li>Health data is read and stored only on your device. It is never uploaded to our servers or any third party.</li>
+            <li>Health data is never sold, never used for advertising or marketing, and never sent to analytics or crash reporting.</li>
+            <li>CycleCare does not write any data to Apple Health.</li>
+            <li>Health data is not stored in iCloud by CycleCare.</li>
+            <li>You can remove CycleCare's access anytime in the Health app (Profile → Apps → CycleCare) or in iOS Settings → Health → Data Access &amp; Devices. Turning off "Import from Apple Health" stops future syncing, and "Delete all data" removes everything that was imported.</li>
+        </ul>
+
         <h2>Analytics and crash reports</h2>
-        <p>We use Firebase Analytics and Firebase Crashlytics (Google) to understand which features are used and to fix crashes. These collect app-usage events (for example "onboarding completed" or "daily log saved"), device model, iOS version, and an app-instance identifier. <strong>They never include</strong> your dates, cycle predictions, symptom or mood values, pain levels, or note text — only the fact that an action happened. Firebase Remote Config is used to switch app features on or off.</p>
+        <p>We use Firebase Analytics and Firebase Crashlytics (Google) to understand which features are used and to fix crashes. These collect app-usage events (for example "onboarding completed" or "daily log saved"), device model, iOS version, and an app-instance identifier. <strong>They never include</strong> your dates, cycle predictions, symptom or mood values, pain levels, note text, or any data read from Apple Health — only the fact that an action happened. Firebase Remote Config is used to switch app features on or off.</p>
 
         <h2>Purchases</h2>
         <p>Subscriptions are processed by Apple through your Apple Account. RevenueCat, our purchase-infrastructure provider, processes an anonymous app-generated identifier and purchase receipt information to validate access. We never see your payment details. See <a href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a>.</p>
